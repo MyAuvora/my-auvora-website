@@ -1,0 +1,313 @@
+import Link from 'next/link';
+
+export default function Fitness() {
+  return (
+    <main className="min-h-screen">
+      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Auvora for Fitness Studios
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Stop losing trials and leads because your CRM isn't built for boutique fitness.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/demo?vertical=fitness"
+                  className="bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
+                >
+                  Book a Fitness Demo
+                </Link>
+                <Link
+                  href="/demo?vertical=fitness"
+                  className="border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-lg hover:bg-amber-50 font-semibold text-center transition-colors"
+                >
+                  Join Pre-Sale at $249/month
+                </Link>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="h-3 bg-teal-600 rounded w-24"></div>
+                    <div className="h-3 bg-amber-500 rounded w-16"></div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="h-2 bg-gray-200 rounded w-full"></div>
+                    <div className="h-2 bg-gray-200 rounded w-5/6"></div>
+                    <div className="h-2 bg-gray-200 rounded w-4/6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Built for boutique fitness operators.
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              For boutique studios and gyms running classes, personal training, or hybrid models.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">1–3 location boutique studios</h3>
+              <p className="text-gray-600">Perfect for growing fitness businesses with multiple locations.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Owners and GMs</h3>
+              <p className="text-gray-600">Who split time between the floor and front desk.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Teams tired of spreadsheets</h3>
+              <p className="text-gray-600">And generic CRMs that don't fit your workflow.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Turn more trials into long-term members.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Never lose a trial</h3>
+              <p className="text-gray-600">Track every prospect from first contact to membership signup.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow up automatically</h3>
+              <p className="text-gray-600">Automated reminders ensure no lead falls through the cracks.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Know your numbers</h3>
+              <p className="text-gray-600">See conversion rates and pipeline health at a glance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Auvora Fitness does for you.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Lead pipeline</h3>
+              <p className="text-gray-600">Track leads from first contact to membership. See exactly where each prospect is in your funnel.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Trial tracking</h3>
+              <p className="text-gray-600">Monitor trial attendance and engagement to identify hot prospects.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up tasks and reminders</h3>
+              <p className="text-gray-600">Never forget to reach out. Get reminders for calls, texts, and emails.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Simple automations</h3>
+              <p className="text-gray-600">Day 1, day 3, day 7 follow-ups happen automatically.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Basic reporting</h3>
+              <p className="text-gray-600">Track leads, trials, and conversions over time with simple dashboards.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Simple pricing for growing studios.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="border-4 border-amber-500 rounded-xl p-8 bg-white shadow-lg">
+              <div className="bg-amber-100 text-amber-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
+                Founding Partner Pre-Sale
+              </div>
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-gray-900 mb-2">$249<span className="text-xl text-gray-600">/month</span></div>
+                <div className="text-gray-600">per location</div>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Limited early access</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Locked-in for 12 months</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Priority support</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Roadmap input</span>
+                </li>
+              </ul>
+              <Link
+                href="/demo?vertical=fitness"
+                className="block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors"
+              >
+                Apply for Pre-Sale
+              </Link>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 bg-white">
+              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
+                Standard Pricing
+              </div>
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-gray-900 mb-2">$399<span className="text-xl text-gray-600">/month</span></div>
+                <div className="text-gray-600">per location</div>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">All core features</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Regular updates included</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">Standard support</span>
+                </li>
+              </ul>
+              <Link
+                href="/demo?vertical=fitness"
+                className="block border-2 border-teal-700 text-teal-700 px-8 py-4 rounded-lg hover:bg-teal-50 font-semibold text-center transition-colors"
+              >
+                Book a Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              From lead to loyal member.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Capture</h3>
+              <p className="text-gray-600">Every inquiry, walk-in, and referral flows into your pipeline automatically.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow Up</h3>
+              <p className="text-gray-600">Automated reminders and sequences keep you on top of every trial.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Convert and Retain</h3>
+              <p className="text-gray-600">Turn trials into members and keep them engaged long-term.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Questions about Auvora Fitness?
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">When will Auvora Fitness be live?</h3>
+              <p className="text-gray-600">We're launching in early 2026. Founding partners get priority access and locked-in pricing.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Can I use Auvora with my existing booking or billing system?</h3>
+              <p className="text-gray-600">Yes! Auvora focuses on lead management and follow-up. It works alongside your existing booking and billing tools.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What's included in the pre-sale offer?</h3>
+              <p className="text-gray-600">Early access, locked-in pricing at $249/month for 12 months, priority support, and direct input on our roadmap.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Is there a contract or can I cancel anytime?</h3>
+              <p className="text-gray-600">Pre-sale partners commit to 12 months at the discounted rate. Standard pricing is month-to-month with no long-term contract.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            See Auvora Fitness in action.
+          </h2>
+          <p className="text-xl mb-8 text-teal-100">
+            Book a demo and we'll walk you through how Auvora can help your studio grow.
+          </p>
+          <Link
+            href="/demo?vertical=fitness"
+            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg hover:bg-gray-100 font-semibold text-lg transition-colors"
+          >
+            Book a Fitness Demo
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
