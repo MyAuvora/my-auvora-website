@@ -11,7 +11,7 @@ export default function Fitness() {
                 Auvora for Fitness Studios
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Stop losing trials and leads because your CRM isn't built for boutique fitness. Includes an AI agent that learns your studio and helps you grow.
+                Stop losing leads because your CRM isn't built for boutique fitness. Includes an AI agent that learns your studio and helps you grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -29,16 +29,32 @@ export default function Fitness() {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="h-3 bg-teal-600 rounded w-24"></div>
-                    <div className="h-3 bg-amber-500 rounded w-16"></div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-2 bg-gray-200 rounded w-full"></div>
-                    <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-                    <div className="h-2 bg-gray-200 rounded w-4/6"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -76,8 +92,8 @@ export default function Fitness() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Trial Conversion Insights</h3>
-              <p className="text-gray-600 text-sm">Get AI-powered suggestions on when to follow up with trials, what messaging works best, and which prospects are most likely to convert.</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Lead Conversion Insights</h3>
+              <p className="text-gray-600 text-sm">Get AI-powered suggestions on when to follow up with leads, what messaging works best, and which prospects are most likely to convert.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
@@ -86,7 +102,7 @@ export default function Fitness() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Ask Your Studio Anything</h3>
-              <p className="text-gray-600 text-sm">"Which class has the best retention?" "How many trials did we get from Instagram last month?" Just ask—no digging through reports.</p>
+              <p className="text-gray-600 text-sm">"Which class has the best retention?" "How many leads did we get from Instagram last month?" Just ask—no digging through reports.</p>
             </div>
           </div>
           <div className="mt-8 text-center">
@@ -97,8 +113,8 @@ export default function Fitness() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Built for boutique fitness operators.
@@ -109,8 +125,8 @@ export default function Fitness() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">1–3 location boutique studios</h3>
-              <p className="text-gray-600">Perfect for growing fitness businesses with multiple locations.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Boutique studios and gyms</h3>
+              <p className="text-gray-600">Perfect for fitness businesses of any size, from single studios to multi-location operations.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Owners and GMs</h3>
@@ -124,11 +140,12 @@ export default function Fitness() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-teal-50 to-gray-50 relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Turn more trials into long-term members.
+              Turn more leads into long-term members.
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -138,7 +155,7 @@ export default function Fitness() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Never lose a trial</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Never lose a lead</h3>
               <p className="text-gray-600">Track every prospect from first contact to membership signup.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
@@ -163,8 +180,8 @@ export default function Fitness() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Auvora Fitness does for you.
@@ -176,8 +193,8 @@ export default function Fitness() {
               <p className="text-gray-600">Track leads from first contact to membership. See exactly where each prospect is in your funnel.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Trial tracking</h3>
-              <p className="text-gray-600">Monitor trial attendance and engagement to identify hot prospects.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Lead tracking</h3>
+              <p className="text-gray-600">Monitor lead engagement and attendance to identify hot prospects.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up tasks and reminders</h3>
@@ -189,7 +206,7 @@ export default function Fitness() {
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Basic reporting</h3>
-              <p className="text-gray-600">Track leads, trials, and conversions over time with simple dashboards.</p>
+              <p className="text-gray-600">Track leads and conversions over time with simple dashboards.</p>
             </div>
           </div>
         </div>
@@ -303,14 +320,14 @@ export default function Fitness() {
                 2
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Follow Up</h3>
-              <p className="text-gray-600">Automated reminders and sequences keep you on top of every trial.</p>
+              <p className="text-gray-600">Automated reminders and sequences keep you on top of every lead.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-teal-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Convert and Retain</h3>
-              <p className="text-gray-600">Turn trials into members and keep them engaged long-term.</p>
+              <p className="text-gray-600">Turn leads into members and keep them engaged long-term.</p>
             </div>
           </div>
         </div>

@@ -23,16 +23,32 @@ export default function Wellness() {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="h-3 bg-teal-600 rounded w-24"></div>
-                    <div className="h-3 bg-amber-500 rounded w-16"></div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-2 bg-gray-200 rounded w-full"></div>
-                    <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-                    <div className="h-2 bg-gray-200 rounded w-4/6"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,8 +107,8 @@ export default function Wellness() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Built for wellness professionals.

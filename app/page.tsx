@@ -37,14 +37,44 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
-                <div className="bg-white rounded-lg p-6 shadow-md mb-4">
-                  <div className="h-4 bg-gray-200 rounded w-3/4 mb-3"></div>
-                  <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                </div>
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <div className="h-4 bg-teal-200 rounded w-2/3 mb-3"></div>
-                  <div className="h-4 bg-teal-200 rounded w-1/3"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-4/5 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-2/5"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,7 +121,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Ask Anything</h3>
-              <p className="text-gray-600 text-sm">No more digging through reports. Just ask: "How many trials converted last month?" or "Which class has the best retention?"</p>
+              <p className="text-gray-600 text-sm">No more digging through reports. Just ask: "How many leads converted last month?" or "Which class has the best retention?"</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
@@ -111,8 +141,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Built for your industry, not generic CRMs.
@@ -146,8 +177,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-teal-50 to-gray-50 relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               One platform to capture, follow up, and convert.
@@ -195,8 +228,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Choose your Auvora product.
@@ -257,8 +290,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-50 via-white to-amber-50 relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How Auvora fits into your day.

@@ -8,7 +8,7 @@ export default function Education() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora for Micro Schools and Daycares
+                Auvora for Private Schools, Micro Schools, and Daycares
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Track inquiries, tours, and enrollments without losing families in the cracks. Includes an AI agent that learns your school and helps optimize enrollment.
@@ -23,16 +23,32 @@ export default function Education() {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="h-3 bg-teal-600 rounded w-24"></div>
-                    <div className="h-3 bg-amber-500 rounded w-16"></div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-2 bg-gray-200 rounded w-full"></div>
-                    <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-                    <div className="h-2 bg-gray-200 rounded w-4/6"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
+                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,8 +107,8 @@ export default function Education() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Made for small schools and centers.
@@ -100,15 +116,15 @@ export default function Education() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Micro schools</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Private schools</h3>
               <p className="text-gray-600">Track every family inquiry and enrollment journey.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Daycares</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Micro schools</h3>
               <p className="text-gray-600">Manage tours and waitlists with ease.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Early childhood centers</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Daycares & early childhood centers</h3>
               <p className="text-gray-600">Keep families engaged from inquiry to enrollment.</p>
             </div>
           </div>
