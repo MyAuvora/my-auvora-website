@@ -8,10 +8,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora: AI-Powered CRM with Your Personal Business Assistant
+                Auvora: The All-in-One Platform with AI That Learns Your Business
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                More than just a CRM—Auvora includes an AI agent that learns your business, suggests sales tactics, optimizes operations, and answers any question about your data. Built for fitness studios, micro schools, wellness practices, and local service businesses.
+                Stop juggling multiple software tools. Auvora combines CRM, POS, and AI-powered business intelligence in one platform. No integrations needed—everything your business needs to capture leads, process payments, and grow smarter every day.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -36,48 +36,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
-                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-4/5 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-2/5"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -92,7 +50,7 @@ export default function Home() {
               Meet Your AI Business Assistant
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Every Auvora CRM includes an AI agent that learns your business as it grows—acting like a personal business assistant that's always available.
+              Every Auvora platform includes an AI agent that learns your business as it grows—acting like a personal business assistant that's always available. Combined with integrated POS and complete business management tools, you'll never need another software solution.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -183,8 +141,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              One platform to capture, follow up, and convert.
+              Everything you need in one platform. No integrations required.
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stop paying for multiple tools that don't talk to each other. Auvora is the complete solution.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-md">
@@ -193,36 +154,35 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Never miss a lead</h3>
-              <p className="text-gray-600">Centralize leads from calls, forms, and social.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Complete CRM</h3>
+              <p className="text-gray-600">Capture leads, manage pipelines, and automate follow-ups—all in one place.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow up automatically</h3>
-              <p className="text-gray-600">Reminders and automation for calls, texts, and emails.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
+              <p className="text-gray-600">Process payments, manage packages, and track revenue without switching tools.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">See your pipeline at a glance</h3>
-              <p className="text-gray-600">Simple dashboards for owners and managers.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Business Intelligence</h3>
+              <p className="text-gray-600">Get smart recommendations and instant answers about your business data.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Built for your workflows</h3>
-              <p className="text-gray-600">Each vertical has its own tailored product.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Industry-Specific Tools</h3>
+              <p className="text-gray-600">Tailored features for fitness, education, wellness, and more.</p>
             </div>
           </div>
         </div>

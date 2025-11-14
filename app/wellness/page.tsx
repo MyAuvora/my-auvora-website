@@ -11,7 +11,7 @@ export default function Wellness() {
                 Auvora for Wellness Practices
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                CRM for chiropractic, physical therapy, massage, and other wellness clinics that need better patient and client follow-up. Includes an AI agent that learns your practice and helps optimize patient care.
+                All-in-one platform for chiropractic, physical therapy, massage, and wellness clinics. Complete patient management with integrated POS, AI-assisted SOAP notes, and intelligent follow-up—no other software needed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -20,37 +20,6 @@ export default function Wellness() {
                 >
                   Book a Wellness Demo
                 </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
-                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -70,7 +39,16 @@ export default function Wellness() {
               Auvora Wellness includes an AI agent that learns your practice patterns and helps you keep your schedule full with engaged patients.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">AI-Assisted SOAP Notes</h3>
+              <p className="text-gray-600 text-sm">Your AI streamlines documentation by helping create comprehensive SOAP notes faster, learning your documentation style over time.</p>
+            </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,11 +157,19 @@ export default function Wellness() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Complete patient notes</h3>
+              <p className="text-gray-600">All patient notes stored in Auvora with AI-assisted SOAP note creation. No need to integrate with other systems.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
+              <p className="text-gray-600">Process payments, manage packages, and track revenue—all in one platform.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lead and patient pipeline</h3>
               <p className="text-gray-600">Track new inquiries and existing patients in one organized system.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up tasks</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up automation</h3>
               <p className="text-gray-600">Get reminders for missed appointments and reactivation campaigns.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
@@ -191,8 +177,8 @@ export default function Wellness() {
               <p className="text-gray-600">Keep a complete history of all patient interactions.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Basic reporting</h3>
-              <p className="text-gray-600">Track new patients, retention, and engagement over time.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics and reporting</h3>
+              <p className="text-gray-600">Track new patients, retention, revenue, and engagement over time.</p>
             </div>
           </div>
         </div>

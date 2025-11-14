@@ -11,7 +11,7 @@ export default function Fitness() {
                 Auvora for Fitness Studios
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Stop losing leads because your CRM isn't built for boutique fitness. Includes an AI agent that learns your studio and helps you grow.
+                The all-in-one platform for boutique fitness. Complete CRM, integrated POS, and AI-powered business intelligence—no other software needed. Stop juggling multiple tools and start growing smarter.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -28,37 +28,6 @@ export default function Fitness() {
                 </Link>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-amber-400 rounded-3xl blur-3xl opacity-20"></div>
-                <div className="relative bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-12 shadow-2xl">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-3/4 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/2"></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-amber-400 bg-opacity-30 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="h-3 bg-white bg-opacity-30 rounded-full w-2/3 mb-2"></div>
-                        <div className="h-3 bg-white bg-opacity-20 rounded-full w-1/3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -73,7 +42,7 @@ export default function Fitness() {
               Your AI Fitness Business Coach
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Auvora Fitness includes an AI agent that learns your studio's patterns and helps you make smarter decisions every day.
+              Auvora Fitness includes an AI agent that learns your studio's patterns and helps you make smarter decisions every day. Combined with integrated POS and complete studio management, you'll never need another software tool.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -189,6 +158,10 @@ export default function Fitness() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border-2 border-gray-200 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
+              <p className="text-gray-600">Process payments, sell memberships and packages, and track revenue—all in one platform.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lead pipeline</h3>
               <p className="text-gray-600">Track leads from first contact to membership. See exactly where each prospect is in your funnel.</p>
             </div>
@@ -197,16 +170,16 @@ export default function Fitness() {
               <p className="text-gray-600">Monitor lead engagement and attendance to identify hot prospects.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up tasks and reminders</h3>
-              <p className="text-gray-600">Never forget to reach out. Get reminders for calls, texts, and emails.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up automation</h3>
+              <p className="text-gray-600">Day 1, day 3, day 7 follow-ups happen automatically. Never forget to reach out.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Simple automations</h3>
-              <p className="text-gray-600">Day 1, day 3, day 7 follow-ups happen automatically.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Member management</h3>
+              <p className="text-gray-600">Track attendance, manage memberships, and monitor engagement—all in one place.</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Basic reporting</h3>
-              <p className="text-gray-600">Track leads and conversions over time with simple dashboards.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics and reporting</h3>
+              <p className="text-gray-600">Track leads, conversions, revenue, and retention with comprehensive dashboards.</p>
             </div>
           </div>
         </div>
