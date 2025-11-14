@@ -123,7 +123,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Fitness</h3>
-              <p className="text-gray-600">Boutique studios and gyms</p>
+              <p className="text-gray-600">Boutique studios, gyms, and dance studios</p>
             </div>
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Education</h3>

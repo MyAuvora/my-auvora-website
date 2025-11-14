@@ -15,7 +15,7 @@ export default function Fitness() {
                 Auvora for <span className="gradient-text">Fitness Studios</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-                The all-in-one platform for boutique fitness. Complete <strong>CRM, integrated POS, staff scheduling,</strong> and <strong>AI-powered business intelligence</strong>—no other software needed. Stop juggling multiple tools and start growing smarter.
+                The all-in-one platform for boutique fitness and dance studios. Complete <strong>CRM, integrated POS, staff scheduling,</strong> and <strong>AI-powered business intelligence</strong>—no other software needed. Stop juggling multiple tools and start growing smarter.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -93,12 +93,12 @@ export default function Fitness() {
               Built for boutique fitness operators.
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              For boutique studios and gyms running classes, personal training, or hybrid models.
+              For boutique studios, gyms, and dance studios running classes, personal training, or hybrid models.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Boutique studios and gyms</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Boutique studios, gyms, and dance studios</h3>
               <p className="text-gray-600">Perfect for fitness businesses of any size, from single studios to multi-location operations.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
