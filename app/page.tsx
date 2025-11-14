@@ -50,23 +50,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-500 mb-4">
-              Trusted by operators like you
-            </h2>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-              <div className="text-4xl font-bold text-gray-400">BRAND</div>
-              <div className="text-4xl font-bold text-gray-400">BRAND</div>
-              <div className="text-4xl font-bold text-gray-400">BRAND</div>
-              <div className="text-4xl font-bold text-gray-400">BRAND</div>
-              <div className="text-4xl font-bold text-gray-400">BRAND</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-teal-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">

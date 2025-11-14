@@ -42,7 +42,7 @@ body {
 }
 
 .aurora-bg {
-  background: linear-gradient(135deg, #0f5257 0%, #1a7a82 25%, #d4af37 50%, #1a7a82 75%, #0f5257 100%);
+  background: linear-gradient(135deg, #0a3d41 0%, #0f5257 25%, #1a7a82 50%, #0f5257 75%, #0a3d41 100%);
   background-size: 200% 200%;
   animation: aurora 15s ease infinite;
 }
