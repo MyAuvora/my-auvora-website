@@ -3,38 +3,65 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora: The All-in-One Platform with AI That Learns Your Business
+      <section className="aurora-bg py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                ✨ The Future of Business Management
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Auvora: The <span className="gradient-text">All-in-One</span> Platform with AI That Learns Your Business
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Stop juggling multiple software tools. Auvora combines CRM, POS, and AI-powered business intelligence in one platform. No integrations needed—everything your business needs to capture leads, process payments, and grow smarter every day.
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+                Stop juggling multiple software tools. Auvora combines <strong>CRM, POS, Staff Scheduling,</strong> and <strong>AI-powered business intelligence</strong> in one platform. No integrations needed—everything your business needs to thrive.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/demo"
-                  className="bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
+                  className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book a Demo
+                  Book a Demo →
                 </Link>
-                <div className="flex flex-col sm:flex-row gap-2">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     href="/fitness"
-                    className="border-2 border-teal-700 text-teal-700 px-6 py-4 rounded-lg hover:bg-teal-50 font-semibold text-center transition-colors"
+                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
                   >
-                    Auvora for Fitness
+                    Fitness
                   </Link>
                   <Link
                     href="/education"
-                    className="border-2 border-teal-700 text-teal-700 px-6 py-4 rounded-lg hover:bg-teal-50 font-semibold text-center transition-colors"
+                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
                   >
-                    Auvora for Education
+                    Education
+                  </Link>
+                  <Link
+                    href="/wellness"
+                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
+                  >
+                    Wellness
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-500 mb-4">
+              Trusted by operators like you
+            </h2>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
+              <div className="text-4xl font-bold text-gray-400">BRAND</div>
+              <div className="text-4xl font-bold text-gray-400">BRAND</div>
+              <div className="text-4xl font-bold text-gray-400">BRAND</div>
+              <div className="text-4xl font-bold text-gray-400">BRAND</div>
+              <div className="text-4xl font-bold text-gray-400">BRAND</div>
             </div>
           </div>
         </div>
@@ -135,54 +162,63 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-teal-50 to-gray-50 relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-        <div className="max-w-7xl mx-auto relative">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-900 to-teal-700 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-400 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Everything you need in one platform. No integrations required.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything you need in one platform. <span className="text-amber-400">No integrations required.</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto">
               Stop paying for multiple tools that don't talk to each other. Auvora is the complete solution.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="glass-panel-dark rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-14 h-14 bg-amber-400 bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Complete CRM</h3>
-              <p className="text-gray-600">Capture leads, manage pipelines, and automate follow-ups—all in one place.</p>
+              <h3 className="text-xl font-bold text-white mb-3">Complete CRM</h3>
+              <p className="text-teal-100">Capture leads, manage pipelines, and automate follow-ups.</p>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass-panel-dark rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-14 h-14 bg-amber-400 bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
-              <p className="text-gray-600">Process payments, manage packages, and track revenue without switching tools.</p>
+              <h3 className="text-xl font-bold text-white mb-3">Integrated POS</h3>
+              <p className="text-teal-100">Process payments, manage packages, and track revenue.</p>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass-panel-dark rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-14 h-14 bg-amber-400 bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Staff Scheduling</h3>
+              <p className="text-teal-100">Plan shifts, manage availability, and ensure coverage.</p>
+            </div>
+            <div className="glass-panel-dark rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-14 h-14 bg-amber-400 bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Business Intelligence</h3>
-              <p className="text-gray-600">Get smart recommendations and instant answers about your business data.</p>
+              <h3 className="text-xl font-bold text-white mb-3">AI Intelligence</h3>
+              <p className="text-teal-100">Smart recommendations and instant answers about your data.</p>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-md">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass-panel-dark rounded-2xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-14 h-14 bg-amber-400 bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Industry-Specific Tools</h3>
-              <p className="text-gray-600">Tailored features for fitness, education, wellness, and more.</p>
+              <h3 className="text-xl font-bold text-white mb-3">Industry Tools</h3>
+              <p className="text-teal-100">Tailored features for your specific business type.</p>
             </div>
           </div>
         </div>
@@ -283,19 +319,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-700 to-teal-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Ready to see Auvora in action?
           </h2>
-          <p className="text-xl mb-8 text-teal-100">
+          <p className="text-xl md:text-2xl mb-10 text-gray-800">
             Book a quick demo and we'll walk you through a version tailored to your business.
           </p>
           <Link
             href="/demo"
-            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg hover:bg-gray-100 font-semibold text-lg transition-colors"
+            className="inline-block bg-teal-700 text-white px-12 py-6 rounded-xl hover:bg-teal-800 font-bold text-xl transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform"
           >
-            Book a Demo
+            Book Your Demo Now →
           </Link>
         </div>
       </section>

@@ -3,26 +3,30 @@ import Link from 'next/link';
 export default function Fitness() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora for Fitness Studios
+      <section className="aurora-bg py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                💪 Built for Boutique Fitness
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Auvora for <span className="gradient-text">Fitness Studios</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                The all-in-one platform for boutique fitness. Complete CRM, integrated POS, and AI-powered business intelligence—no other software needed. Stop juggling multiple tools and start growing smarter.
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+                The all-in-one platform for boutique fitness. Complete <strong>CRM, integrated POS, staff scheduling,</strong> and <strong>AI-powered business intelligence</strong>—no other software needed. Stop juggling multiple tools and start growing smarter.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/demo?vertical=fitness"
-                  className="bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
+                  className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book a Fitness Demo
+                  Book a Fitness Demo →
                 </Link>
                 <Link
                   href="/demo?vertical=fitness"
-                  className="border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-lg hover:bg-amber-50 font-semibold text-center transition-colors"
+                  className="border-2 border-amber-600 bg-white text-amber-700 px-10 py-5 rounded-xl hover:bg-amber-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
                 >
                   Join Pre-Sale at $249/month
                 </Link>
@@ -156,28 +160,32 @@ export default function Fitness() {
               What Auvora Fitness does for you.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
               <p className="text-gray-600">Process payments, sell memberships and packages, and track revenue—all in one platform.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Coach Scheduling</h3>
+              <p className="text-gray-600">Schedule coaches for classes and PT sessions, manage availability, and ensure coverage with alerts.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lead pipeline</h3>
               <p className="text-gray-600">Track leads from first contact to membership. See exactly where each prospect is in your funnel.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lead tracking</h3>
               <p className="text-gray-600">Monitor lead engagement and attendance to identify hot prospects.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up automation</h3>
               <p className="text-gray-600">Day 1, day 3, day 7 follow-ups happen automatically. Never forget to reach out.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Member management</h3>
               <p className="text-gray-600">Track attendance, manage memberships, and monitor engagement—all in one place.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics and reporting</h3>
               <p className="text-gray-600">Track leads, conversions, revenue, and retention with comprehensive dashboards.</p>
             </div>

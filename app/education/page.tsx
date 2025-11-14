@@ -3,22 +3,26 @@ import Link from 'next/link';
 export default function Education() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora for Private Schools, Micro Schools, and Daycares
+      <section className="aurora-bg py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                📚 Built for Education
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Auvora for <span className="gradient-text">Private Schools, Micro Schools, and Daycares</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                The all-in-one platform for educational institutions. Complete enrollment management, integrated POS for tuition and fees, and AI-powered enrollment intelligence—no other software needed. Stop juggling multiple tools and start enrolling smarter.
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+                The all-in-one platform for educational institutions. Complete <strong>enrollment management, integrated POS, staff scheduling,</strong> and <strong>AI-powered enrollment intelligence</strong>—no other software needed. Stop juggling multiple tools and start enrolling smarter.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/demo?vertical=education"
-                  className="bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
+                  className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book an Education Demo
+                  Book an Education Demo →
                 </Link>
               </div>
             </div>
@@ -146,28 +150,32 @@ export default function Education() {
               What Auvora Education does for you.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
               <p className="text-gray-600">Process tuition payments, registration fees, and other charges—all in one platform.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Teacher Scheduling</h3>
+              <p className="text-gray-600">Schedule teachers and aides with ratio awareness, manage shift swaps, and ensure proper coverage.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Inquiry pipeline</h3>
               <p className="text-gray-600">Track families from New Inquiry → Tour Scheduled → Tour Completed → Decision Pending → Enrolled / Waitlist.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Parent communication log</h3>
               <p className="text-gray-600">Keep a complete history of all interactions with each family.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up automation</h3>
               <p className="text-gray-600">Automated reminders ensure you never forget to reach out after tours or important milestones.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Waitlist management</h3>
               <p className="text-gray-600">Manage waitlists and automatically notify families when spots open up.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics and reporting</h3>
               <p className="text-gray-600">Track inquiries, tours, enrollments, and revenue over time with comprehensive dashboards.</p>
             </div>

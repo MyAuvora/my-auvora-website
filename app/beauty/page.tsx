@@ -3,24 +3,30 @@ import Link from 'next/link';
 export default function Beauty() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Auvora Beauty is coming soon.
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              CRM for salons, barbershops, med spas, and beauty businesses.
-            </p>
-            <p className="text-lg text-gray-600 mb-8">
-              We're building Auvora Beauty to help beauty businesses capture more clients and keep their books full. Join the waitlist to be the first to know when we launch.
-            </p>
-            <Link
-              href="/demo?vertical=beauty"
-              className="inline-block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
-            >
-              Join Beauty Waitlist
-            </Link>
+      <section className="aurora-bg py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                💇 Coming Soon
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Auvora <span className="gradient-text">Beauty</span> is coming soon.
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+                The all-in-one platform for salons, barbershops, med spas, and beauty businesses.
+              </p>
+              <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                We're building Auvora Beauty with <strong>complete CRM, integrated POS, staff scheduling,</strong> and <strong>AI-powered client intelligence</strong> to help beauty businesses capture more clients and keep their books full. Join the waitlist to be the first to know when we launch.
+              </p>
+              <Link
+                href="/demo?vertical=beauty"
+                className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
+              >
+                Join Beauty Waitlist →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
