@@ -8,10 +8,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora: AI CRM built for real-world operators.
+                Auvora: AI-Powered CRM with Your Personal Business Assistant
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Auvora helps fitness studios, micro schools, daycares, wellness practices, and local service businesses stop losing leads and start growing.
+                More than just a CRM—Auvora includes an AI agent that learns your business, suggests sales tactics, optimizes operations, and answers any question about your data. Built for fitness studios, micro schools, wellness practices, and local service businesses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -48,6 +48,65 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-teal-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              ✨ AI-Powered Intelligence
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Meet Your AI Business Assistant
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Every Auvora CRM includes an AI agent that learns your business as it grows—acting like a personal business assistant that's always available.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Smart Suggestions</h3>
+              <p className="text-gray-600 text-sm">Get AI-powered recommendations for sales tactics, follow-up timing, and conversion strategies tailored to your business.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Optimize Operations</h3>
+              <p className="text-gray-600 text-sm">For fitness centers, discover optimal class times. For schools, identify peak enrollment periods. Your AI learns what works best.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Ask Anything</h3>
+              <p className="text-gray-600 text-sm">No more digging through reports. Just ask: "How many trials converted last month?" or "Which class has the best retention?"</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Learns & Adapts</h3>
+              <p className="text-gray-600 text-sm">The more you use Auvora, the smarter it gets. Your AI agent learns your business patterns, preferences, and what drives results.</p>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-lg text-gray-700 font-semibold">
+              It's like having a business analyst, sales coach, and data scientist—all in one.
+            </p>
           </div>
         </div>
       </section>
