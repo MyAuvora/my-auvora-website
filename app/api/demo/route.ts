@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       try {
         const emailContent = {
           to: 'myauvora@gmail.com',
-          from: 'noreply@devinapps.com', // This will be replaced with your verified sender
+          from: process.env.SENDGRID_FROM_EMAIL || 'myauvora@gmail.com', // Use verified sender from env
           subject: `New Demo Request from ${name} - ${businessName}`,
           text: `
 New Demo Request Received!
