@@ -187,44 +187,49 @@ export default function Education() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple pricing for schools and centers.
+              Seamless integrations with tools you already use.
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              While Auvora is an all-in-one platform, we integrate with key tools to make your workflow even smoother.
+            </p>
           </div>
-          <div className="max-w-2xl mx-auto">
-            <div className="border-2 border-teal-500 rounded-xl p-8 bg-white shadow-lg">
-              <div className="bg-teal-100 text-teal-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
-                Auvora Education
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
               </div>
-              <div className="mb-6">
-                <div className="text-4xl font-bold text-gray-900 mb-2">$299<span className="text-xl text-gray-600">/month</span></div>
-                <div className="text-gray-600">per location</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">QuickBooks</h3>
+              <p className="text-gray-600">Sync your accounting and payroll data seamlessly.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                </svg>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Includes onboarding support</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">All core features</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">No long-term contract required</span>
-                </li>
-              </ul>
-              <Link
-                href="/demo?vertical=education"
-                className="block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors"
-              >
-                Book an Education Demo
-              </Link>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Facebook</h3>
+              <p className="text-gray-600">Connect your Facebook page for lead capture and messaging.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Instagram</h3>
+              <p className="text-gray-600">Capture leads from Instagram DMs and comments automatically.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">IXL</h3>
+              <p className="text-gray-600">Integrate with IXL for comprehensive learning management.</p>
             </div>
           </div>
         </div>
@@ -271,19 +276,19 @@ export default function Education() {
           <div className="space-y-6">
             <div className="bg-white rounded-xl p-8 shadow-md">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Do I need to switch from my current school management system?</h3>
-              <p className="text-gray-600">No! Auvora Education focuses on lead management and enrollment. It works alongside your existing school management software.</p>
+              <p className="text-gray-600">No! Auvora Education is an all-in-one platform, but we integrate with tools like IXL, QuickBooks, Facebook, and Instagram to complement your existing workflow.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Can Auvora work alongside my existing software?</h3>
-              <p className="text-gray-600">Yes. Auvora is designed to complement your existing tools, not replace them. We focus on the enrollment pipeline.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What integrations does Auvora support?</h3>
+              <p className="text-gray-600">Auvora integrates with IXL for learning management, QuickBooks for accounting and payroll, and connects with Facebook and Instagram for lead capture and social media management.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How long does setup take?</h3>
               <p className="text-gray-600">Most schools are up and running within a week. We provide onboarding support to help you get started quickly.</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Is my data secure?</h3>
-              <p className="text-gray-600">Absolutely. We use industry-standard encryption and security practices to protect your family data.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How does the AI agent work?</h3>
+              <p className="text-gray-600">The AI agent learns your school's enrollment patterns and provides smart recommendations on tour follow-up timing, peak enrollment periods, and family engagement. Just ask it questions and get instant answers.</p>
             </div>
           </div>
         </div>
