@@ -12,10 +12,33 @@ export default function Demo() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit demo request');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError('Failed to submit demo request. Please try again or email us directly at myauvora@gmail.com');
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -163,11 +186,18 @@ export default function Demo() {
               />
             </div>
 
+            {error && (
+              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-red-700">
+                {error}
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
+              disabled={isSubmitting}
+              className="w-full bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Request Demo
+              {isSubmitting ? 'Submitting...' : 'Request Demo'}
             </button>
           </form>
         </div>

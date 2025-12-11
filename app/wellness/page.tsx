@@ -3,46 +3,94 @@ import Link from 'next/link';
 export default function Wellness() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Auvora for Wellness Practices
+      <section className="aurora-bg py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                💚 Built for Wellness
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Auvora for <span className="gradient-text">Wellness Practices</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                CRM for chiropractic, physical therapy, massage, and other wellness clinics that need better patient and client follow-up.
+              <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+                All-in-one platform for chiropractic, physical therapy, massage, and wellness clinics. Complete <strong>patient management, integrated POS, provider scheduling, AI-assisted SOAP notes,</strong> and intelligent follow-up—no other software needed.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/demo?vertical=wellness"
-                  className="bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
+                  className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book a Wellness Demo
+                  Book a Wellness Demo →
                 </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-teal-100 to-amber-50 rounded-2xl p-8 shadow-xl">
-                <div className="bg-white rounded-lg p-6 shadow-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="h-3 bg-teal-600 rounded w-24"></div>
-                    <div className="h-3 bg-amber-500 rounded w-16"></div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-2 bg-gray-200 rounded w-full"></div>
-                    <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-                    <div className="h-2 bg-gray-200 rounded w-4/6"></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-teal-50">
         <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              ✨ AI-Powered for Wellness
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Your AI Practice Growth Partner
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              Auvora Wellness includes an AI agent that learns your practice patterns and helps you keep your schedule full with engaged patients.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">AI-Assisted SOAP Notes</h3>
+              <p className="text-gray-600 text-sm">Your AI streamlines documentation by helping create comprehensive SOAP notes faster, learning your documentation style over time.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Reactivation Timing</h3>
+              <p className="text-gray-600 text-sm">Your AI identifies which inactive patients are most likely to return and suggests the optimal time to reach out for reactivation.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Patient Engagement Insights</h3>
+              <p className="text-gray-600 text-sm">Get AI-powered recommendations on follow-up strategies, appointment scheduling patterns, and retention tactics that work for your practice.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-amber-200">
+              <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Ask About Your Practice</h3>
+              <p className="text-gray-600 text-sm">"How many new patients did we get this month?" "Which patients haven't been in for 60+ days?" Just ask—instant answers without digging through reports.</p>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <p className="text-base text-gray-700 italic">
+              The AI learns from your practice data and gets smarter over time, helping you make better decisions about patient outreach and retention.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative">
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Built for wellness professionals.
@@ -111,22 +159,34 @@ export default function Wellness() {
               What Auvora Wellness does for you.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Complete patient notes</h3>
+              <p className="text-gray-600">All patient notes stored in Auvora with AI-assisted SOAP note creation. No need to integrate with other systems.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Integrated POS</h3>
+              <p className="text-gray-600">Process payments, manage packages, and track revenue—all in one platform.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Provider Scheduling</h3>
+              <p className="text-gray-600">Schedule providers by room, service, and recurring availability. Manage coverage and optimize utilization.</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lead and patient pipeline</h3>
               <p className="text-gray-600">Track new inquiries and existing patients in one organized system.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up tasks</h3>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Follow-up automation</h3>
               <p className="text-gray-600">Get reminders for missed appointments and reactivation campaigns.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Communication log</h3>
               <p className="text-gray-600">Keep a complete history of all patient interactions.</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Basic reporting</h3>
-              <p className="text-gray-600">Track new patients, retention, and engagement over time.</p>
+            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics and reporting</h3>
+              <p className="text-gray-600">Track new patients, retention, revenue, and engagement over time.</p>
             </div>
           </div>
         </div>
@@ -136,17 +196,41 @@ export default function Wellness() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Pricing tailored to your clinic.
+              Seamless integrations with tools you already use.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We're finalizing pricing for Auvora Wellness. Contact us to discuss your clinic and get early access pricing.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              While Auvora is an all-in-one platform, we integrate with key tools to make your workflow even smoother.
             </p>
-            <Link
-              href="/demo?vertical=wellness"
-              className="inline-block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
-            >
-              Contact Us About Wellness
-            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">QuickBooks</h3>
+              <p className="text-gray-600">Sync your accounting and payroll data seamlessly.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Facebook</h3>
+              <p className="text-gray-600">Connect your Facebook page for lead capture and messaging.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Instagram</h3>
+              <p className="text-gray-600">Capture leads from Instagram DMs and comments automatically.</p>
+            </div>
           </div>
         </div>
       </section>
