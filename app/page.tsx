@@ -15,7 +15,7 @@ export default function Home() {
                 Auvora: The <span className="gradient-text">All-in-One</span> Platform with AI That Learns Your Business
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-                Stop juggling multiple software tools. Auvora combines <strong>CRM, POS, Staff Scheduling,</strong> and <strong>AI-powered business intelligence</strong> in one platform. No integrations needed—everything your business needs to thrive.
+                Stop juggling multiple software tools. Auvora combines <strong>CRM, POS, Staff Scheduling,</strong> and <strong>AI-powered business intelligence</strong> in one platform. No unnecessary integrations—everything your business needs to thrive.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Everything you need in one platform. <span className="text-amber-400">No integrations required.</span>
+              Everything you need in one platform. <span className="text-amber-400">No unnecessary integrations.</span>
             </h2>
             <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto">
               Stop paying for multiple tools that don't talk to each other. Auvora is the complete solution.
