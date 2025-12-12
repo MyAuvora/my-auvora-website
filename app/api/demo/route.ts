@@ -103,7 +103,7 @@ Submitted at: ${new Date().toLocaleString()}
           },
         });
       } catch (sheetsError) {
-        console.error('Error logging to Google Sheets:', sheetsError, sheetsError?.response?.data);
+        console.error('Error logging to Google Sheets:', sheetsError);
       }
     }
 
