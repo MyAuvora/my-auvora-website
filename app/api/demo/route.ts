@@ -21,9 +21,6 @@ export async function POST(request: Request) {
       );
     }
 
-    let sheetsStatus = 'NOT_ATTEMPTED';
-    let sheetsDetails = '';
-
     if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
       try {
         const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID || '1oh1C1sxRG87YlSrmejGBuGAHoU4PAtnZZkNedudnd5E';
@@ -49,7 +46,7 @@ export async function POST(request: Request) {
         const escapedSheetName = `'${sheetName.replace(/'/g, "''")}'`;
         const range = `${escapedSheetName}!A:G`;
         
-        const result = await sheets.spreadsheets.values.append({
+        await sheets.spreadsheets.values.append({
           spreadsheetId,
           range,
           valueInputOption: 'USER_ENTERED',
@@ -57,29 +54,9 @@ export async function POST(request: Request) {
             values: [row],
           },
         });
-
-        sheetsStatus = 'SUCCESS';
-        sheetsDetails = `✅ Google Sheets: SUCCESS
-- Spreadsheet ID: ${spreadsheetId}
-- Sheet Name: ${sheetName}
-- Range: ${range}
-- Updates: ${JSON.stringify(result.data.updates)}`;
       } catch (sheetsError) {
         console.error('Error logging to Google Sheets:', sheetsError);
-        const errorDetails = sheetsError as any;
-        sheetsStatus = 'ERROR';
-        sheetsDetails = `❌ Google Sheets: ERROR
-- Error Message: ${errorDetails?.message || 'Unknown error'}
-- Error Code: ${errorDetails?.code || 'N/A'}
-- Status: ${errorDetails?.response?.status || 'N/A'}
-- Spreadsheet ID: ${SPREADSHEET_ID}
-- Sheet Name: ${SHEET_NAME}`;
       }
-    } else {
-      sheetsStatus = 'NOT_RUNNING';
-      sheetsDetails = `⚠️ Google Sheets: NOT RUNNING
-- GOOGLE_CLIENT_EMAIL present: ${!!process.env.GOOGLE_CLIENT_EMAIL}
-- GOOGLE_PRIVATE_KEY present: ${!!process.env.GOOGLE_PRIVATE_KEY}`;
     }
 
     if (process.env.SENDGRID_API_KEY) {
@@ -102,10 +79,6 @@ ${message}
 
 ---
 Submitted at: ${new Date().toLocaleString()}
-
----
-DIAGNOSTIC INFO:
-${sheetsDetails}
           `,
           html: `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -129,11 +102,6 @@ ${sheetsDetails}
   <p style="color: #666; font-size: 12px; margin-top: 30px;">
     Submitted at: ${new Date().toLocaleString()}
   </p>
-  
-  <div style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; margin-top: 20px;">
-    <h4 style="margin-top: 0; color: #856404;">📊 Diagnostic Info:</h4>
-    <pre style="background-color: #fff; padding: 10px; border-radius: 4px; overflow-x: auto; font-size: 12px;">${sheetsDetails}</pre>
-  </div>
 </div>
           `,
         };
