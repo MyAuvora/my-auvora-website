@@ -76,6 +76,9 @@ Submitted at: ${new Date().toLocaleString()}
 
     if (process.env.GOOGLE_CLIENT_EMAIL && process.env.GOOGLE_PRIVATE_KEY) {
       try {
+        const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID || '1oh1C1sxRG87YlSrmejGBuGAHoU4PAtnZZkNedudnd5E';
+        const sheetName = process.env.GOOGLE_SHEETS_SHEET_NAME || 'Sheet1';
+        
         const auth = new google.auth.GoogleAuth({
           credentials: {
             type: 'service_account',
@@ -88,21 +91,98 @@ Submitted at: ${new Date().toLocaleString()}
           scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         });
 
-      const sheets = google.sheets({ version: 'v4', auth });
+        const sheets = google.sheets({ version: 'v4', auth });
 
-      const timestamp = new Date().toLocaleString();
-      const row = [timestamp, name, email, businessName, website || '', industry, message];
+        const timestamp = new Date().toLocaleString();
+        const row = [timestamp, name, email, businessName, website || '', industry, message];
 
-        await sheets.spreadsheets.values.append({
-          spreadsheetId: SPREADSHEET_ID,
-          range: `${SHEET_NAME}!A:G`,
+        const escapedSheetName = `'${sheetName.replace(/'/g, "''")}'`;
+        const range = `${escapedSheetName}!A:G`;
+        
+        const result = await sheets.spreadsheets.values.append({
+          spreadsheetId,
+          range,
           valueInputOption: 'USER_ENTERED',
           requestBody: {
             values: [row],
           },
         });
+
+        if (process.env.SENDGRID_API_KEY) {
+          try {
+            await sgMail.send({
+              to: 'myauvora@gmail.com',
+              from: process.env.SENDGRID_FROM_EMAIL || 'myauvora@gmail.com',
+              subject: 'Google Sheets SUCCESS - Diagnostic',
+              text: `
+Google Sheets integration SUCCEEDED!
+
+Configuration Used:
+- Spreadsheet ID: ${spreadsheetId}
+- Sheet Name: ${sheetName}
+- Escaped Sheet Name: ${escapedSheetName}
+- Range: ${range}
+
+API Response:
+- Updates: ${JSON.stringify(result.data.updates)}
+- Spreadsheet ID: ${result.data.spreadsheetId}
+
+This diagnostic email confirms the API call succeeded. Check your Google Sheet to see if the data appears.
+              `,
+            });
+          } catch (diagnosticEmailError) {
+            console.error('Failed to send success diagnostic email:', diagnosticEmailError);
+          }
+        }
       } catch (sheetsError) {
         console.error('Error logging to Google Sheets:', sheetsError);
+        
+        if (process.env.SENDGRID_API_KEY) {
+          try {
+            const errorDetails = sheetsError as any;
+            await sgMail.send({
+              to: 'myauvora@gmail.com',
+              from: process.env.SENDGRID_FROM_EMAIL || 'myauvora@gmail.com',
+              subject: 'Google Sheets ERROR - Diagnostic',
+              text: `
+Google Sheets integration FAILED with the following error:
+
+Error Message: ${errorDetails?.message || 'Unknown error'}
+Error Code: ${errorDetails?.code || 'N/A'}
+Status: ${errorDetails?.response?.status || 'N/A'}
+Error Details: ${JSON.stringify(errorDetails?.errors || [])}
+
+Configuration Used:
+- Spreadsheet ID: ${process.env.GOOGLE_SHEETS_SPREADSHEET_ID || '1oh1C1sxRG87YlSrmejGBuGAHoU4PAtnZZkNedudnd5E'}
+- Sheet Name: ${process.env.GOOGLE_SHEETS_SHEET_NAME || 'Sheet1'}
+
+This is a diagnostic email to help identify the issue. Once fixed, this email will stop being sent.
+              `,
+            });
+          } catch (diagnosticEmailError) {
+            console.error('Failed to send error diagnostic email:', diagnosticEmailError);
+          }
+        }
+      }
+    } else {
+      if (process.env.SENDGRID_API_KEY) {
+        try {
+          await sgMail.send({
+            to: 'myauvora@gmail.com',
+            from: process.env.SENDGRID_FROM_EMAIL || 'myauvora@gmail.com',
+            subject: 'Google Sheets NOT RUNNING - Diagnostic',
+            text: `
+Google Sheets integration did NOT run because required environment variables are missing:
+
+- GOOGLE_CLIENT_EMAIL present: ${!!process.env.GOOGLE_CLIENT_EMAIL}
+- GOOGLE_PRIVATE_KEY present: ${!!process.env.GOOGLE_PRIVATE_KEY}
+
+Please ensure both variables are set in Vercel Production environment.
+            `,
+          });
+        } catch (diagnosticEmailError) {
+          console.error('Failed to send diagnostic email:', diagnosticEmailError);
+        }
       }
     }
 
