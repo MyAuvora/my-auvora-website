@@ -72,8 +72,8 @@ export async function POST(request: Request) {
 - Error Message: ${errorDetails?.message || 'Unknown error'}
 - Error Code: ${errorDetails?.code || 'N/A'}
 - Status: ${errorDetails?.response?.status || 'N/A'}
-- Spreadsheet ID: ${spreadsheetId}
-- Sheet Name: ${sheetName}`;
+- Spreadsheet ID: ${SPREADSHEET_ID}
+- Sheet Name: ${SHEET_NAME}`;
       }
     } else {
       sheetsStatus = 'NOT_RUNNING';
