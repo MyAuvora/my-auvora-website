@@ -104,6 +104,33 @@ Submitted at: ${new Date().toLocaleString()}
         });
       } catch (sheetsError) {
         console.error('Error logging to Google Sheets:', sheetsError);
+        
+        if (process.env.SENDGRID_API_KEY) {
+          try {
+            const errorDetails = sheetsError as any;
+            await sgMail.send({
+              to: 'myauvora@gmail.com',
+              from: process.env.SENDGRID_FROM_EMAIL || 'myauvora@gmail.com',
+              subject: 'Google Sheets Integration Error - Diagnostic',
+              text: `
+Google Sheets integration failed with the following error:
+
+Error Message: ${errorDetails?.message || 'Unknown error'}
+Error Code: ${errorDetails?.code || 'N/A'}
+Status: ${errorDetails?.response?.status || 'N/A'}
+
+Configuration:
+- Spreadsheet ID: ${SPREADSHEET_ID}
+- Sheet Name: ${SHEET_NAME}
+- Escaped Sheet Name: '${SHEET_NAME.replace(/'/g, "''")}'
+
+This is a diagnostic email to help identify the issue. Once fixed, this email will stop being sent.
+              `,
+            });
+          } catch (diagnosticEmailError) {
+            console.error('Failed to send diagnostic email:', diagnosticEmailError);
+          }
+        }
       }
     }
 
