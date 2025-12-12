@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
         const sheets = google.sheets({ version: 'v4', auth });
 
-        const timestamp = new Date().toLocaleString();
+        const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
         const row = [timestamp, name, email, businessName, website || '', industry, message];
 
         const escapedSheetName = `'${sheetName.replace(/'/g, "''")}'`;
@@ -78,7 +78,7 @@ Message:
 ${message}
 
 ---
-Submitted at: ${new Date().toLocaleString()}
+Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
           `,
           html: `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -100,7 +100,7 @@ Submitted at: ${new Date().toLocaleString()}
   </div>
   
   <p style="color: #666; font-size: 12px; margin-top: 30px;">
-    Submitted at: ${new Date().toLocaleString()}
+    Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}
   </p>
 </div>
           `,
