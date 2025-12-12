@@ -93,16 +93,17 @@ Submitted at: ${new Date().toLocaleString()}
       const timestamp = new Date().toLocaleString();
       const row = [timestamp, name, email, businessName, website || '', industry, message];
 
+        const escapedSheetName = `'${SHEET_NAME.replace(/'/g, "''")}'`;
         await sheets.spreadsheets.values.append({
           spreadsheetId: SPREADSHEET_ID,
-          range: `${SHEET_NAME}!A:G`,
+          range: `${escapedSheetName}!A:G`,
           valueInputOption: 'USER_ENTERED',
           requestBody: {
             values: [row],
           },
         });
       } catch (sheetsError) {
-        console.error('Error logging to Google Sheets:', sheetsError);
+        console.error('Error logging to Google Sheets:', sheetsError, sheetsError?.response?.data);
       }
     }
 
