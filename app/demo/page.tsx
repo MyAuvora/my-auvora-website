@@ -12,10 +12,42 @@ export default function Demo() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://auvora-crm-demo.vercel.app/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: null,
+          business_name: formData.businessName,
+          industry: formData.industry === 'other' ? null : formData.industry,
+          message: formData.message,
+          source: 'demo_form',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError('There was an error submitting your request. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -163,12 +195,19 @@ export default function Demo() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
-            >
-              Request Demo
-            </button>
+                        {error && (
+                          <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                            {error}
+                          </div>
+                        )}
+
+                        <button
+                          type="submit"
+                          disabled={submitting}
+                          className="w-full bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {submitting ? 'Submitting...' : 'Request Demo'}
+                        </button>
           </form>
         </div>
       </div>
