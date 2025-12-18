@@ -59,6 +59,31 @@ export async function POST(request: Request) {
       }
     }
 
+    // Forward to Auvora CRM leads API
+    try {
+      const crmResponse = await fetch('https://auvora-crm-demo.vercel.app/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone: null,
+          business_name: businessName,
+          industry: industry === 'other' ? null : industry,
+          message,
+          source: 'demo_form',
+        }),
+      });
+
+      if (!crmResponse.ok) {
+        console.error('Failed to forward to CRM:', await crmResponse.text());
+      }
+    } catch (crmError) {
+      console.error('Error forwarding to CRM:', crmError);
+    }
+
     if (process.env.SENDGRID_API_KEY) {
       try {
         const emailContent = {
