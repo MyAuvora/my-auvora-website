@@ -60,6 +60,7 @@ export async function POST(request: Request) {
     }
 
     // Forward to Auvora CRM leads API
+    let crmResult: { ok: boolean; status?: number; leadId?: string; error?: string } = { ok: false };
     try {
       const crmResponse = await fetch('https://auvora-crm-demo.vercel.app/api/leads', {
         method: 'POST',
@@ -77,11 +78,20 @@ export async function POST(request: Request) {
         }),
       });
 
-      if (!crmResponse.ok) {
-        console.error('Failed to forward to CRM:', await crmResponse.text());
+      crmResult.status = crmResponse.status;
+      
+      if (crmResponse.ok) {
+        const crmData = await crmResponse.json();
+        crmResult.ok = true;
+        crmResult.leadId = crmData.lead?.id;
+      } else {
+        const errorText = await crmResponse.text();
+        console.error('Failed to forward to CRM:', errorText);
+        crmResult.error = errorText.substring(0, 200);
       }
     } catch (crmError) {
       console.error('Error forwarding to CRM:', crmError);
+      crmResult.error = crmError instanceof Error ? crmError.message : 'Unknown error';
     }
 
     if (process.env.SENDGRID_API_KEY) {
@@ -140,6 +150,7 @@ Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago'
     return NextResponse.json({
       success: true,
       message: 'Demo request received successfully',
+      crm: crmResult,
     });
   } catch (error) {
     console.error('Error processing demo request:', error);
