@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function Auxiliary() {
   return (
     <main className="min-h-screen">
@@ -8,8 +6,8 @@ export default function Auxiliary() {
         <div className="max-w-7xl mx-auto relative z-10 w-full">
           <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
-                🛠️ Coming Soon
+              <div className="inline-block bg-gray-300 bg-opacity-80 backdrop-blur-sm text-gray-700 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-gray-400">
+                Coming Soon
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Auvora <span className="gradient-text">Auxiliary</span> is coming soon.
@@ -20,12 +18,12 @@ export default function Auxiliary() {
               <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
                 We're building Auvora Auxiliary with <strong>complete CRM, integrated POS, staff scheduling,</strong> and <strong>AI-powered customer intelligence</strong> to help local service businesses track leads, follow up, and grow recurring customers. Join the waitlist to hear when we launch.
               </p>
-              <Link
-                href="/demo?vertical=auxiliary"
-                className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
+              <button
+                disabled
+                className="bg-gray-400 text-white px-10 py-5 rounded-xl font-bold text-center text-lg cursor-not-allowed"
               >
-                Join Auxiliary Waitlist →
-              </Link>
+                Coming Soon
+              </button>
             </div>
           </div>
         </div>
@@ -63,12 +61,12 @@ export default function Auxiliary() {
           <p className="text-xl text-gray-600 mb-8">
             We're talking to local service business owners to understand their needs. Join our waitlist and we'll reach out to learn about your business.
           </p>
-          <Link
-            href="/demo?vertical=auxiliary"
-            className="inline-block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
+          <button
+            disabled
+            className="inline-block bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg cursor-not-allowed"
           >
-            Join the Waitlist
-          </Link>
+            Coming Soon
+          </button>
         </div>
       </section>
     </main>

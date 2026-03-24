@@ -9,41 +9,27 @@ export default function Home() {
           <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
             <div className="text-center">
               <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
-                ✨ The Future of Business Management
+                Now Live — Fitness &amp; Education CRMs
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Auvora: The <span className="gradient-text">All-in-One</span> Platform with AI That Learns Your Business
+                The <span className="gradient-text">All-in-One</span> Platform with AI That Learns Your Business
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
                 Stop juggling multiple software tools. Auvora combines <strong>CRM, POS, Staff Scheduling,</strong> and <strong>AI-powered business intelligence</strong> in one platform. No integrations needed—everything your business needs to thrive.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
-                  href="/demo"
+                  href="/fitness"
                   className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book a Demo →
+                  Explore Fitness CRM
                 </Link>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/fitness"
-                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
-                  >
-                    Fitness
-                  </Link>
-                  <Link
-                    href="/education"
-                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
-                  >
-                    Education
-                  </Link>
-                  <Link
-                    href="/wellness"
-                    className="border-2 border-teal-700 bg-white text-teal-700 px-8 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
-                  >
-                    Wellness
-                  </Link>
-                </div>
+                <Link
+                  href="/education"
+                  className="border-2 border-teal-700 bg-white text-teal-700 px-10 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
+                >
+                  Explore Education CRM
+                </Link>
               </div>
             </div>
           </div>
@@ -121,23 +107,28 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
+            <div className="border-2 border-teal-500 rounded-xl p-6 bg-teal-50 shadow-lg relative">
+              <div className="absolute -top-3 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">Flagship</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Fitness</h3>
               <p className="text-gray-600">Boutique studios, gyms, and dance studios</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
+            <div className="border-2 border-teal-400 rounded-xl p-6 bg-teal-50 relative">
+              <div className="absolute -top-3 right-4 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">Active</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Education</h3>
               <p className="text-gray-600">Micro schools and daycares</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
+            <div className="border-2 border-gray-200 rounded-xl p-6 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Wellness</h3>
               <p className="text-gray-600">Chiropractic, physical therapy, massage, and more</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
+            <div className="border-2 border-gray-200 rounded-xl p-6 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Beauty</h3>
               <p className="text-gray-600">Salons, barbershops, and med spas</p>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-teal-500 transition-colors">
+            <div className="border-2 border-gray-200 rounded-xl p-6 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Auxiliary</h3>
               <p className="text-gray-600">Local services like lawn care, pet care, and home services</p>
             </div>
@@ -215,37 +206,41 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-teal-500 rounded-xl p-8 hover:shadow-lg transition-all bg-teal-50 relative">
+              <div className="absolute -top-3 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">Flagship</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Auvora Fitness</h3>
-              <p className="text-gray-600 mb-6">CRM for boutique fitness studios and gyms.</p>
+              <p className="text-gray-600 mb-6">The complete CRM for boutique fitness studios, gyms, and dance studios. Live now.</p>
               <Link
                 href="/fitness"
                 className="inline-block bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 font-semibold transition-colors"
               >
-                Learn more
+                Explore Fitness CRM
               </Link>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-teal-400 rounded-xl p-8 hover:shadow-lg transition-all bg-teal-50 relative">
+              <div className="absolute -top-3 right-4 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">Active</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Auvora Education</h3>
-              <p className="text-gray-600 mb-6">CRM for micro schools and daycares.</p>
+              <p className="text-gray-600 mb-6">Enrollment management for private schools, micro schools, and daycares. Live now.</p>
               <Link
                 href="/education"
                 className="inline-block bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 font-semibold transition-colors"
               >
-                Learn more
+                Explore Education CRM
               </Link>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8 hover:border-teal-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-8 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Auvora Wellness</h3>
-              <p className="text-gray-600 mb-6">CRM for wellness practices and clinics.</p>
+              <p className="text-gray-600 mb-6">CRM for chiropractic, physical therapy, massage, and wellness clinics.</p>
               <Link
                 href="/wellness"
-                className="inline-block bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 font-semibold transition-colors"
+                className="inline-block border-2 border-gray-300 text-gray-500 px-6 py-3 rounded-lg font-semibold"
               >
-                Learn more
+                Learn More
               </Link>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8 bg-gray-50">
+            <div className="border-2 border-gray-200 rounded-xl p-8 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Auvora Beauty</h3>
               <p className="text-gray-600 mb-6">Coming soon for salons, barbers, and med spas.</p>
               <button
@@ -255,7 +250,8 @@ export default function Home() {
                 Coming Soon
               </button>
             </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8 bg-gray-50">
+            <div className="border-2 border-gray-200 rounded-xl p-8 bg-gray-50 relative">
+              <div className="absolute -top-3 right-4 bg-gray-400 text-white px-3 py-1 rounded-full text-xs font-bold">Coming Soon</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Auvora Auxiliary</h3>
               <p className="text-gray-600 mb-6">Coming soon for local service businesses.</p>
               <button

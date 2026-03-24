@@ -28,17 +28,11 @@ export default function Navigation() {
             <Link href="/education" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
               Education
             </Link>
-            <Link href="/wellness" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
-              Wellness
-            </Link>
-            <Link href="/beauty" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
-              Beauty
-            </Link>
-            <Link href="/auxiliary" className="text-gray-700 hover:text-teal-700 font-medium transition-colors">
-              Auxiliary
+            <Link href="/wellness" className="text-gray-500 hover:text-gray-700 font-medium transition-colors">
+              Wellness <span className="text-xs text-gray-400">(Soon)</span>
             </Link>
             <Link
-              href="/demo"
+              href="/demo?vertical=fitness"
               className="bg-teal-700 text-white px-6 py-2 rounded-lg hover:bg-teal-800 font-medium transition-colors"
             >
               Book a Demo
@@ -68,17 +62,11 @@ export default function Navigation() {
               <Link href="/education" className="text-gray-700 hover:text-teal-700 font-medium py-2">
                 Education
               </Link>
-              <Link href="/wellness" className="text-gray-700 hover:text-teal-700 font-medium py-2">
-                Wellness
-              </Link>
-              <Link href="/beauty" className="text-gray-700 hover:text-teal-700 font-medium py-2">
-                Beauty
-              </Link>
-              <Link href="/auxiliary" className="text-gray-700 hover:text-teal-700 font-medium py-2">
-                Auxiliary
+              <Link href="/wellness" className="text-gray-500 hover:text-gray-700 font-medium py-2">
+                Wellness <span className="text-xs text-gray-400">(Soon)</span>
               </Link>
               <Link
-                href="/demo"
+                href="/demo?vertical=fitness"
                 className="bg-teal-700 text-white px-6 py-2 rounded-lg hover:bg-teal-800 font-medium text-center"
               >
                 Book a Demo

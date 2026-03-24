@@ -9,7 +9,7 @@ export default function Education() {
           <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
             <div className="text-center">
               <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
-                📚 Built for Education
+                Now Available
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Auvora for <span className="gradient-text">Private Schools, Micro Schools, and Daycares</span>
@@ -22,9 +22,18 @@ export default function Education() {
                   href="/demo?vertical=education"
                   className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Book an Education Demo →
+                  Book a Demo
                 </Link>
+                <a
+                  href="https://auvora-epic-prep.up.railway.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-teal-700 bg-white text-teal-700 px-10 py-5 rounded-xl hover:bg-teal-50 font-bold text-center transition-all shadow-md hover:shadow-lg"
+                >
+                  Try the Live Demo
+                </a>
               </div>
+              <p className="text-sm text-gray-500 mt-4">No credit card required. See the full platform instantly.</p>
             </div>
           </div>
         </div>
