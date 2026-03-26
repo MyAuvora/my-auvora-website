@@ -192,25 +192,6 @@ export default function Wellness() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Pricing tailored to your clinic.
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We're finalizing pricing for Auvora Wellness. Contact us to discuss your clinic and get early access pricing.
-            </p>
-            <Link
-              href="/demo?vertical=wellness"
-              className="inline-block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
-            >
-              Contact Us About Wellness
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

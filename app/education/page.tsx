@@ -192,53 +192,6 @@ export default function Education() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple pricing for schools and centers.
-            </h2>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <div className="border-2 border-teal-500 rounded-xl p-8 bg-white shadow-lg">
-              <div className="bg-teal-100 text-teal-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
-                Auvora Education
-              </div>
-              <div className="mb-6">
-                <div className="text-4xl font-bold text-gray-900 mb-2">$299<span className="text-xl text-gray-600">/month</span></div>
-                <div className="text-gray-600">per location</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Includes onboarding support</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">All core features</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-teal-700 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">No long-term contract required</span>
-                </li>
-              </ul>
-              <Link
-                href="/demo?vertical=education"
-                className="block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors"
-              >
-                Book an Education Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
