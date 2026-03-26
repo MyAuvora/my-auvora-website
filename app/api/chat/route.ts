@@ -115,7 +115,35 @@ Pricing is being finalized. When asked about pricing, say something like: "We're
 
 export async function POST(request: NextRequest) {
   try {
-    const { messages } = await request.json();
+    const body = await request.json();
+    const { messages } = body;
+
+    // Validate and sanitize messages to prevent prompt injection
+    if (!Array.isArray(messages)) {
+      return Response.json(
+        { error: 'Invalid messages format' },
+        { status: 400 }
+      );
+    }
+
+    const sanitizedMessages = messages
+      .filter(
+        (m: Record<string, unknown>) =>
+          (m.role === 'user' || m.role === 'assistant') &&
+          typeof m.content === 'string'
+      )
+      .map((m: Record<string, unknown>) => ({
+        role: m.role as 'user' | 'assistant',
+        content: (m.content as string).slice(0, 2000),
+      }))
+      .slice(-50);
+
+    if (sanitizedMessages.length === 0) {
+      return Response.json(
+        { error: 'No valid messages provided' },
+        { status: 400 }
+      );
+    }
 
     if (!process.env.OPENAI_API_KEY) {
       return Response.json(
@@ -132,7 +160,7 @@ export async function POST(request: NextRequest) {
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
-        ...messages,
+        ...sanitizedMessages,
       ],
       temperature: 0.7,
       max_tokens: 500,
