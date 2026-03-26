@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Wellness() {
   return (
     <main className="min-h-screen">
@@ -6,8 +8,8 @@ export default function Wellness() {
         <div className="max-w-7xl mx-auto relative z-10 w-full">
           <div className="glass-panel rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="inline-block bg-gray-300 bg-opacity-80 backdrop-blur-sm text-gray-700 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-gray-400">
-                Coming Soon
+              <div className="inline-block bg-amber-400 bg-opacity-20 backdrop-blur-sm text-amber-900 px-6 py-3 rounded-full text-sm font-bold mb-6 border border-amber-400">
+                💚 Built for Wellness
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Auvora for <span className="gradient-text">Wellness Practices</span>
@@ -16,14 +18,13 @@ export default function Wellness() {
                 All-in-one platform for chiropractic, physical therapy, massage, and wellness clinics. Complete <strong>patient management, integrated POS, provider scheduling, AI-assisted SOAP notes,</strong> and intelligent follow-up—no other software needed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button
-                  disabled
-                  className="bg-gray-400 text-white px-10 py-5 rounded-xl font-bold text-center text-lg cursor-not-allowed"
+                <Link
+                  href="/demo?vertical=wellness"
+                  className="bg-teal-700 text-white px-10 py-5 rounded-xl hover:bg-teal-800 font-bold text-center transition-all text-lg shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  Coming Soon
-                </button>
+                  Book a Wellness Demo →
+                </Link>
               </div>
-              <p className="text-sm text-gray-500 mt-4">Auvora Wellness is currently in development. Join the waitlist to get early access.</p>
             </div>
           </div>
         </div>
@@ -198,14 +199,14 @@ export default function Wellness() {
               Pricing tailored to your clinic.
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We're finalizing pricing for Auvora Wellness. Join our waitlist to get early access pricing when we launch.
+              We're finalizing pricing for Auvora Wellness. Contact us to discuss your clinic and get early access pricing.
             </p>
-            <button
-              disabled
-              className="inline-block bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg cursor-not-allowed"
+            <Link
+              href="/demo?vertical=wellness"
+              className="inline-block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-lg transition-colors"
             >
-              Coming Soon
-            </button>
+              Contact Us About Wellness
+            </Link>
           </div>
         </div>
       </section>
@@ -273,12 +274,12 @@ export default function Wellness() {
           <p className="text-xl mb-8 text-teal-100">
             Book a demo and we'll show you how Auvora can help your practice grow.
           </p>
-          <button
-            disabled
-            className="inline-block bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg cursor-not-allowed"
+          <Link
+            href="/demo?vertical=wellness"
+            className="inline-block bg-white text-teal-700 px-8 py-4 rounded-lg hover:bg-gray-100 font-semibold text-lg transition-colors"
           >
-            Coming Soon
-          </button>
+            Book a Wellness Demo
+          </Link>
         </div>
       </section>
     </main>

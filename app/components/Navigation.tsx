@@ -31,6 +31,12 @@ export default function Navigation() {
             <Link href="/wellness" className="text-gray-500 hover:text-gray-700 font-medium transition-colors">
               Wellness <span className="text-xs text-gray-400">(Soon)</span>
             </Link>
+            <Link href="/beauty" className="text-gray-500 hover:text-gray-700 font-medium transition-colors">
+              Beauty <span className="text-xs text-gray-400">(Soon)</span>
+            </Link>
+            <Link href="/auxiliary" className="text-gray-500 hover:text-gray-700 font-medium transition-colors">
+              Auxiliary <span className="text-xs text-gray-400">(Soon)</span>
+            </Link>
             <Link
               href="/demo?vertical=fitness"
               className="bg-teal-700 text-white px-6 py-2 rounded-lg hover:bg-teal-800 font-medium transition-colors"
@@ -64,6 +70,12 @@ export default function Navigation() {
               </Link>
               <Link href="/wellness" className="text-gray-500 hover:text-gray-700 font-medium py-2">
                 Wellness <span className="text-xs text-gray-400">(Soon)</span>
+              </Link>
+              <Link href="/beauty" className="text-gray-500 hover:text-gray-700 font-medium py-2">
+                Beauty <span className="text-xs text-gray-400">(Soon)</span>
+              </Link>
+              <Link href="/auxiliary" className="text-gray-500 hover:text-gray-700 font-medium py-2">
+                Auxiliary <span className="text-xs text-gray-400">(Soon)</span>
               </Link>
               <Link
                 href="/demo?vertical=fitness"
