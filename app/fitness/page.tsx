@@ -353,90 +353,6 @@ export default function Fitness() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple pricing. No surprises.
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              One price. Everything included. No per-user fees, no feature gates, no hidden costs.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="border-4 border-amber-500 rounded-xl p-8 bg-white shadow-lg relative">
-              <div className="absolute -top-4 left-6 bg-amber-500 text-white px-4 py-1 rounded-full text-sm font-bold">Most Popular</div>
-              <div className="bg-amber-100 text-amber-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
-                Founding Partner
-              </div>
-              <div className="mb-6">
-                <div className="text-5xl font-bold text-gray-900 mb-1">$249<span className="text-xl text-gray-600">/mo</span></div>
-                <div className="text-gray-600">per location</div>
-                <div className="text-sm text-amber-700 font-semibold mt-2">Save $1,800/year vs. standard pricing</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Everything in the platform',
-                  'Unlimited users and roles',
-                  'AI business intelligence agent',
-                  'Priority support',
-                  'Locked-in rate for 12 months',
-                  'Direct input on our roadmap',
-                  'Free onboarding and setup',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start">
-                    <svg className="w-5 h-5 text-teal-700 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/demo?vertical=fitness"
-                className="block bg-teal-700 text-white px-8 py-4 rounded-lg hover:bg-teal-800 font-semibold text-center transition-colors text-lg"
-              >
-                Claim Founding Partner Spot
-              </Link>
-              <p className="text-xs text-gray-500 text-center mt-3">Limited spots available</p>
-            </div>
-            <div className="border-2 border-gray-200 rounded-xl p-8 bg-white">
-              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg inline-block mb-4 font-semibold">
-                Standard
-              </div>
-              <div className="mb-6">
-                <div className="text-5xl font-bold text-gray-900 mb-1">$399<span className="text-xl text-gray-600">/mo</span></div>
-                <div className="text-gray-600">per location</div>
-                <div className="text-sm text-gray-500 mt-2">Month-to-month, cancel anytime</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Everything in the platform',
-                  'Unlimited users and roles',
-                  'AI business intelligence agent',
-                  'Standard support',
-                  'No long-term commitment',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start">
-                    <svg className="w-5 h-5 text-teal-700 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/demo?vertical=fitness"
-                className="block border-2 border-teal-700 text-teal-700 px-8 py-4 rounded-lg hover:bg-teal-50 font-semibold text-center transition-colors text-lg"
-              >
-                Book a Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -457,12 +373,8 @@ export default function Fitness() {
               <p className="text-gray-600">Unlimited. Every plan includes unlimited users. Owners, managers, trainers, and front desk staff each get their own role-specific dashboard.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">What&apos;s included in the Founding Partner offer?</h3>
-              <p className="text-gray-600">Everything in the platform at $249/month (locked in for 12 months). Plus priority support, free onboarding, and direct input on our roadmap. It&apos;s the best deal we&apos;ll ever offer.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Can I cancel anytime?</h3>
-              <p className="text-gray-600">Founding Partners commit to 12 months at the discounted rate. Standard pricing is month-to-month with no long-term contract.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How much does Auvora Fitness cost?</h3>
+              <p className="text-gray-600">We&apos;re finalizing pricing now. Book a demo or ask our AI assistant and we&apos;ll walk you through options based on your studio&apos;s needs.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How does the AI agent work?</h3>
