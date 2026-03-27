@@ -273,25 +273,30 @@ export async function POST(request: NextRequest) {
       // If the AI made a tool call but didn't include a text response,
       // do a follow-up call to get the actual reply
       if (!reply) {
-        const toolMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...sanitizedMessages,
-          message as OpenAI.Chat.Completions.ChatCompletionAssistantMessageParam,
-          ...message.tool_calls.map((tc) => ({
-            role: 'tool' as const,
-            tool_call_id: tc.id,
-            content: leadCaptured ? 'Lead saved successfully.' : 'Lead capture skipped.',
-          })),
-        ];
+        try {
+          const toolMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+            { role: 'system', content: SYSTEM_PROMPT },
+            ...sanitizedMessages,
+            message as OpenAI.Chat.Completions.ChatCompletionAssistantMessageParam,
+            ...message.tool_calls.map((tc) => ({
+              role: 'tool' as const,
+              tool_call_id: tc.id,
+              content: leadCaptured ? 'Lead saved successfully.' : 'Lead capture skipped.',
+            })),
+          ];
 
-        const followUp = await openai.chat.completions.create({
-          model: 'gpt-4o-mini',
-          messages: toolMessages,
-          temperature: 0.7,
-          max_tokens: 500,
-        });
+          const followUp = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
+            messages: toolMessages,
+            temperature: 0.7,
+            max_tokens: 500,
+          });
 
-        reply = followUp.choices[0]?.message?.content || 'Sorry, I had trouble processing that. Could you try again?';
+          reply = followUp.choices[0]?.message?.content || 'Sorry, I had trouble processing that. Could you try again?';
+        } catch (followUpError) {
+          console.error('Follow-up call failed after tool execution:', followUpError);
+          reply = 'Sorry, I had trouble processing that. Could you try again?';
+        }
       }
     }
 
