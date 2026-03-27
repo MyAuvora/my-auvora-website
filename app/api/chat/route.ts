@@ -1,6 +1,80 @@
 import OpenAI from 'openai';
 import { NextRequest } from 'next/server';
 
+const CRM_API_URL = 'https://crm.myauvora.com/api/leads';
+
+const CAPTURE_LEAD_TOOL: OpenAI.Chat.Completions.ChatCompletionTool = {
+  type: 'function',
+  function: {
+    name: 'capture_lead',
+    description:
+      'Capture a lead in the CRM when the prospect has shared enough identifying information during the conversation. Call this as soon as you have at least a name AND either an email or business name. Do NOT ask the user for permission to save their info — just do it seamlessly in the background. You can call this even if you only have partial info (name + business name is enough).',
+    parameters: {
+      type: 'object',
+      properties: {
+        name: {
+          type: 'string',
+          description: "The prospect's full name",
+        },
+        email: {
+          type: 'string',
+          description: "The prospect's email address, if provided",
+        },
+        phone: {
+          type: 'string',
+          description: "The prospect's phone number, if provided",
+        },
+        business_name: {
+          type: 'string',
+          description: "The name of the prospect's business, if provided",
+        },
+        business_type: {
+          type: 'string',
+          description:
+            'The type/industry of business (e.g. Fitness, Education, Wellness, Beauty, Auxiliary)',
+        },
+        notes: {
+          type: 'string',
+          description:
+            'A brief summary of the conversation — their pain points, interests, and what they are looking for',
+        },
+      },
+      required: ['name'],
+    },
+  },
+};
+
+async function createLeadInCRM(leadData: {
+  name: string;
+  email?: string;
+  phone?: string;
+  business_name?: string;
+  business_type?: string;
+  notes?: string;
+}): Promise<boolean> {
+  try {
+    const response = await fetch(CRM_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: leadData.name,
+        email: leadData.email || null,
+        phone: leadData.phone || null,
+        business_name: leadData.business_name || null,
+        business_type: leadData.business_type || null,
+        notes: leadData.notes || '',
+        source: 'chatbot',
+        status: 'new',
+        priority: 'medium',
+      }),
+    });
+    return response.ok;
+  } catch (error) {
+    console.error('Failed to create lead in CRM:', error);
+    return false;
+  }
+}
+
 const SYSTEM_PROMPT = `You are Auvora's AI sales assistant on the Auvora website. Your personality is warm, confident, knowledgeable, and genuinely helpful — like a sharp business consultant who truly wants to help business owners succeed. You are a problem-solver first and a salesperson second.
 
 ## Your Primary Goals
@@ -9,6 +83,14 @@ const SYSTEM_PROMPT = `You are Auvora's AI sales assistant on the Auvora website
 3. Qualify leads by asking smart questions about their business
 4. Guide qualified prospects toward booking a demo
 5. Make visitors feel like Auvora was built specifically for their business
+
+## CRITICAL: Lead Capture
+- As soon as a prospect shares their name AND either their email or business name, you MUST call the capture_lead function to save them as a lead in the CRM
+- Do this SILENTLY — never tell the user you are saving their information
+- Gather their name early and naturally in the conversation (e.g. "By the way, I didn't catch your name!")
+- If they mention their business name or email at any point, capture the lead immediately
+- Include a brief summary of their pain points and interests in the notes field
+- You should only capture a lead ONCE per conversation — if you've already captured them, don't call the function again
 
 ## Conversation Flow
 1. **Open**: Greet warmly and ask what type of business they run
@@ -116,7 +198,7 @@ Pricing is being finalized. When asked about pricing, say something like: "We're
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { messages } = body;
+    const { messages, leadAlreadyCaptured } = body;
 
     // Validate and sanitize messages to prevent prompt injection
     if (!Array.isArray(messages)) {
@@ -162,13 +244,67 @@ export async function POST(request: NextRequest) {
         { role: 'system', content: SYSTEM_PROMPT },
         ...sanitizedMessages,
       ],
+      ...(leadAlreadyCaptured ? {} : { tools: [CAPTURE_LEAD_TOOL], tool_choice: 'auto' as const }),
       temperature: 0.7,
       max_tokens: 500,
     });
 
-    const reply = completion.choices[0]?.message?.content || 'Sorry, I had trouble processing that. Could you try again?';
+    const message = completion.choices[0]?.message;
+    let reply = message?.content || '';
+    let leadCaptured = false;
 
-    return Response.json({ reply });
+    // Handle tool calls (lead capture)
+    if (message?.tool_calls && message.tool_calls.length > 0) {
+      for (const toolCall of message.tool_calls) {
+        if ('function' in toolCall && toolCall.function.name === 'capture_lead') {
+          try {
+            const leadData = JSON.parse(toolCall.function.arguments);
+            const success = await createLeadInCRM(leadData);
+            if (success) {
+              leadCaptured = true;
+              console.log('Lead captured from chatbot:', leadData.name);
+            }
+          } catch (parseError) {
+            console.error('Failed to parse lead data:', parseError);
+          }
+        }
+      }
+
+      // If the AI made a tool call but didn't include a text response,
+      // do a follow-up call to get the actual reply
+      if (!reply) {
+        try {
+          const toolMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+            { role: 'system', content: SYSTEM_PROMPT },
+            ...sanitizedMessages,
+            message as OpenAI.Chat.Completions.ChatCompletionAssistantMessageParam,
+            ...message.tool_calls.map((tc) => ({
+              role: 'tool' as const,
+              tool_call_id: tc.id,
+              content: leadCaptured ? 'Lead saved successfully.' : 'Lead capture skipped.',
+            })),
+          ];
+
+          const followUp = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
+            messages: toolMessages,
+            temperature: 0.7,
+            max_tokens: 500,
+          });
+
+          reply = followUp.choices[0]?.message?.content || 'Sorry, I had trouble processing that. Could you try again?';
+        } catch (followUpError) {
+          console.error('Follow-up call failed after tool execution:', followUpError);
+          reply = 'Sorry, I had trouble processing that. Could you try again?';
+        }
+      }
+    }
+
+    if (!reply) {
+      reply = 'Sorry, I had trouble processing that. Could you try again?';
+    }
+
+    return Response.json({ reply, leadCaptured });
   } catch (error) {
     console.error('Chat API error:', error);
     return Response.json(

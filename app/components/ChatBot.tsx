@@ -13,6 +13,7 @@ export default function ChatBot() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasGreeted, setHasGreeted] = useState(false);
+  const [leadCaptured, setLeadCaptured] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -52,12 +53,15 @@ export default function ChatBot() {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: updatedMessages }),
+        body: JSON.stringify({ messages: updatedMessages, leadAlreadyCaptured: leadCaptured }),
       });
 
       if (!res.ok) throw new Error('Failed to get response');
 
       const data = await res.json();
+      if (data.leadCaptured) {
+        setLeadCaptured(true);
+      }
       setMessages((prev) => [
         ...prev,
         { role: 'assistant', content: data.reply },
