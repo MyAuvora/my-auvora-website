@@ -21,7 +21,7 @@ export default function Demo() {
     setError(null);
 
     try {
-      const response = await fetch('https://auvora-crm-demo.vercel.app/api/leads', {
+      const response = await fetch('https://crm.myauvora.com/api/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,9 +31,9 @@ export default function Demo() {
           email: formData.email,
           phone: null,
           business_name: formData.businessName,
-          industry: formData.industry === 'other' ? null : formData.industry,
-          message: formData.message,
-          source: 'demo_form',
+          business_type: formData.industry === 'other' ? null : (formData.industry.charAt(0).toUpperCase() + formData.industry.slice(1)),
+          notes: formData.message,
+          source: 'website',
         }),
       });
 
