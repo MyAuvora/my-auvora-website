@@ -21,7 +21,7 @@ export default function Demo() {
     setError(null);
 
     try {
-      const response = await fetch('https://crm.myauvora.com/api/leads', {
+      const response = await fetch('https://backend-production-b5ec.up.railway.app/api/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

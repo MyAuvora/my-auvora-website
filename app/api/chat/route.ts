@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 import { NextRequest } from 'next/server';
 
-const CRM_API_URL = 'https://crm.myauvora.com/api/leads';
+const CRM_API_URL = 'https://backend-production-b5ec.up.railway.app/api/leads';
 
 const CAPTURE_LEAD_TOOL: OpenAI.Chat.Completions.ChatCompletionTool = {
   type: 'function',
